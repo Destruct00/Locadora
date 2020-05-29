@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {MegaMenuItem,MenuItem} from 'primeng/api';
 import { Routes, Router, ActivatedRoute } from '@angular/router';
 import { AtorListComponent } from 'src/app/pages/ator/list/ator-list/ator-list.component';
+import { AtorFormService } from 'src/app/pages/ator/services/ator-form.service';
 
 @Component({
   selector: 'app-menu',
@@ -11,7 +12,7 @@ import { AtorListComponent } from 'src/app/pages/ator/list/ator-list/ator-list.c
 export class MenuComponent implements OnInit {
 
   constructor(
-    private router: Router,
+    private router: Router
   ) { }
 
   items: MegaMenuItem[];
@@ -25,7 +26,7 @@ export class MenuComponent implements OnInit {
                     [
                         {
                             label: 'Cadastro',
-                            items: [{label: 'Ator', url: './ator-list.component.html'},
+                            items: [{label: 'Ator',routerLink:['/lista']},
                                     {label: 'Diretor'},
                                     {label: 'Classe'},
                                     {label: 'Item'},
@@ -64,7 +65,9 @@ export class MenuComponent implements OnInit {
     }
 
     onSubmit(){
-      this.router.navigateByUrl('/ator-list.component.html');
+      this.router.navigate(['/lista']);
    }
+
+
 
 }

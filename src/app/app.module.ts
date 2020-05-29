@@ -13,6 +13,9 @@ import {ButtonModule} from 'primeng/button';
 import {TableModule} from 'primeng/table';
 import {CardModule} from 'primeng/card';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { AtorFormService } from './pages/ator/services/ator-form.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -33,9 +36,11 @@ import { RouterModule } from '@angular/router';
     TableModule,
     CardModule,
     RouterModule,
+    FormsModule,
+    HttpClientModule
 
   ],
-  providers: [],
+  providers: [AtorFormService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

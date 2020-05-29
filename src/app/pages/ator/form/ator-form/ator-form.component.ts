@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { Ator } from '../../models/Ator';
+import { AtorFormService } from '../../services/ator-form.service';
 
 @Component({
   selector: 'app-ator-form',
@@ -13,21 +14,17 @@ export class AtorFormComponent implements OnInit {
   public formAtor: FormGroup;
   public ator:Ator;
 
-  constructor() { }
+  constructor(private atorService: AtorFormService) { }
 
   ngOnInit(): void {
     this.exibir = false;
     this.header = '';
+    this.ator = new Ator();
   }
 
   salvar() {
-      this.cadastar(this.ator);
-      // if (this.questao.id) {
-        //this.editar(this.questao);
-        //} else {
-          //this.cadastar(this.questao);
-          //}
-          // this.alterar.emit(null);
+    this.atorService.salvar(this.ator);
+    this.exibir=false;
   }
 
   cadastar(ator:Ator) {

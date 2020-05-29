@@ -5,7 +5,7 @@
         <h3 class="p-col-12">Ator</h3>
         <div class="ui-inputgroup border-textInput">
         <span class="ui-float-label">
-            <input ngModel="ator.nome" id="nome" type="text" autoResize="autoResize" cols="85"pInputText>
+            <input [(ngModel)]="ator.nome" id="nome" name="first" value="nome"type="text" autoResize="autoResize" cols="85"pInputText onfocus="this.value='';">
             <label for="float-input">Nome</label>
         </span>
 
