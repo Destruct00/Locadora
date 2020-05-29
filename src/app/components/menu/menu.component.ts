@@ -15,6 +15,8 @@ export class MenuComponent implements OnInit {
     private router: Router
   ) { }
 
+
+
   items: MegaMenuItem[];
 
     ngOnInit() {
@@ -26,8 +28,8 @@ export class MenuComponent implements OnInit {
                     [
                         {
                             label: 'Cadastro',
-                            items: [{label: 'Ator',routerLink:['/lista']},
-                                    {label: 'Diretor'},
+                            items: [{label: 'Ator',routerLink:['/lista-atores']},
+                                    {label: 'Diretor',routerLink:['/lista-diretores']},
                                     {label: 'Classe'},
                                     {label: 'Item'},
                                     {label: 'Titulo'}
@@ -65,7 +67,8 @@ export class MenuComponent implements OnInit {
     }
 
     onSubmit(){
-      this.router.navigate(['/lista']);
+
+      this.router.navigate(['/lista-diretores']);
    }
 
 

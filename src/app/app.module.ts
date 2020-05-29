@@ -16,6 +16,8 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { AtorFormService } from './pages/ator/services/ator-form.service';
 import { HttpClientModule } from '@angular/common/http';
+import { DiretorFormComponent } from './pages/diretor/form/diretor-form/diretor-form.component';
+import { DiretorListComponent } from './pages/diretor/list/diretor-list/diretor-list.component';
 
 
 
@@ -24,7 +26,9 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     MenuComponent,
     AtorFormComponent,
-    AtorListComponent
+    AtorListComponent,
+    DiretorFormComponent,
+    DiretorListComponent
   ],
   imports: [
     BrowserModule,

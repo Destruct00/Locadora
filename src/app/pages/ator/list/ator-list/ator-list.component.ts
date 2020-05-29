@@ -30,7 +30,9 @@ export class AtorListComponent implements OnInit {
 
   }
 
-
+  refresh() {
+    this.ngOnInit();
+  }
 
   openDialog(edicao: boolean, id: number) {
     this.dialogAtor.openDialog(edicao, id);
